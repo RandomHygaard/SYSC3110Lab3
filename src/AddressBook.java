@@ -11,11 +11,16 @@ public class AddressBook {
 
     public void removeBuddy(BuddyInfo buddy){myBuddies.remove(buddy);}
 
+    public String buddyName(BuddyInfo buddy){
+        return buddy.getName();
+    }
+
     public static void main(String[] args){
         BuddyInfo buddy = new BuddyInfo("tod", "carton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(buddy);
+        System.out.println(addressBook.buddyName(buddy));
         System.out.println("this code changed twice");
     }
 
